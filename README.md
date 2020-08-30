@@ -56,16 +56,17 @@ file named `patch-2.mpq` and even lower the quality of the remaining sounds.
 
 If you decide to make installer for the game you can use [Inno Setup](https://jrsoftware.org/isinfo.php)
 for which script is provided, named `wow.iss` along with icon extracted from
-`Wow.exe` via [ResourcesExtract](https://www.nirsoft.net/utils/resources_extract.html).
-The scripts assumes that you opted to not include the cinematics aswell as some
-non-essential game files and audio files were split into separate MPQ data
-files, one for the game locale and generic one which must be distributed
+`Wow.exe` via [ResourcesExtract](https://www.nirsoft.net/utils/resources_extract.html),
+bitmap converted from the icon and a publicly avaivable image also converted.
+The scripts assumes that you opted to not include non-essential game files,
+cinematic and audio files were split into separate MPQ data files, the audio
+into one for the game locale and generic one which must be distributed
 along with the Inno Setup generated installer files named `optional-sound.bin`
-(generic) and `optional-sound-2.bin` (locale). The installer script also
-assumes the game files are located in `D:\Games\World of Warcraft 3.3.5` and
-the client locale is `enGB`, adjust it as needed. The size of the game for this
-case would be around 6GB with the main files only, around 12GB with sound files
-included.
+(generic), `optional-sound-2.bin` (locale) and `optional-cinematic.bin`. The
+installer script also assumes the game files are located in
+`D:\Games\World of Warcraft 3.3.5` and the client locale is `enGB`, adjust it
+as needed. The size of the game for this case would be around 6GB with the main
+files only, around 12GB with sound and cinematic files included.
 
 Is it legal to redistribute such client you may ask, probably isn't. Is it
 practicle you may ask, probably is. It's the journey that counts, right?
