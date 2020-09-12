@@ -67,9 +67,11 @@ Name: full; Description: "Default"
 Name: custom; Description: "Custom"; Flags: iscustom
 
 [Components]
+; Game data files
 Name: "Main"; Description: "Main game files"; Types: full custom; Flags: fixed
 Name: "Sound"; Description: "Music, ambiance and sound effects"; Types: full
 Name: "Cinematic"; Description: "Cinematics"; Types: full
+; CVars, check https://wowwiki.fandom.com/wiki/Console_variables
 Name: "gxAPI"; Description: "Graphics API to use:"; Types: full custom; Flags: fixed
 Name: "gxAPI\auto"; Description: "Automatic (default)"; Types: full; Flags: exclusive
 Name: "gxAPI\d3d9"; Description: "DirectX 9.0"; Types: custom; Flags: exclusive
@@ -79,6 +81,9 @@ Name: "maxFPS\200"; Description: "200 (default)"; Types: full; Flags: exclusive
 Name: "maxFPS\100"; Description: "100"; Types: custom; Flags: exclusive
 Name: "maxFPS\60"; Description: "60"; Types: custom; Flags: exclusive
 Name: "maxFPS\30"; Description: "30"; Types: custom; Flags: exclusive
+Name: "textureCacheSize"; Description: "Texture cache size:"; Types: full custom; Flags: fixed
+Name: "textureCacheSize\32"; Description: "32 (default)"; Types: full; Flags: exclusive
+Name: "textureCacheSize\64"; Description: "64 (requires system with 1GB RAM or more)"; Types: custom; Flags: exclusive 
 
 [Files]
 Source: "{src}\optional-sound.bin"; DestDir: "{app}\Data"; DestName: "patch-2.MPQ"; Flags: ignoreversion external; Components: Sound
@@ -112,120 +117,6 @@ Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\speech-enGB.MPQ"; DestDir: "
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\TechSupport.url"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\termination.html"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\tos.html"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe.html"; DestDir: "{app}\Data\enGB\Documentation"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-botleft.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-botright.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-bottom.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-left.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-merge.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-mergebot.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-middle.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-right.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\bg-top.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\Blizz.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\BLWidget.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\BRWidget.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\BWidget.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\CRepeat.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\dragon-left.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\dragon-right.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\gryphon-right.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\help-request.gif"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\ItemMarker.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\logo-blizzard.gif"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\logo-blizzard.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\logo-bnet.gif"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\logo-wow.gif"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\LRepeat.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\MacLogo.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\PCLogo.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\pixel.gif"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\RRepeat.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\splash.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\title-troubleshooting.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\TLWidget.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\TRWidget.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\TWidget.jpg"; DestDir: "{app}\Data\enGB\Documentation\images"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\contactinfo-over.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\contactinfo.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\mac-over.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\mac.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\pc-over.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\pc.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\readme-over.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\readme.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\readme.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\troubleshooting-over.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\troubleshooting.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\troubleshooting.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\website-over.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\buttons\website.gif"; DestDir: "{app}\Data\enGB\Documentation\images\buttons"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\titles\contactinfo-mac.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\titles"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\titles\contactinfo-pc.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\titles"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\titles\readme-mac.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\titles"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\titles\readme-pc.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\titles"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\titles\troubleshooting-mac.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\titles"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\images\titles\troubleshooting-pc.jpg"; DestDir: "{app}\Data\enGB\Documentation\images\titles"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\BSpacer.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\CSpacer.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Detector.js"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Greeting.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Index.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\LBorder.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Nav.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\RBorder.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Requirements.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Splash.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\Styles.css"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\StylesLeft.css"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\TBorder.html"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Layout\TheScript.js"; DestDir: "{app}\Data\enGB\Documentation\Layout"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(Mac)Foreword.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(Mac)Installation.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(Mac)Patching.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(Mac)ReadMeMenu.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(Mac)SystemRequirements.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(Mac)Uninstall.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(PC)Foreword.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(PC)Installation.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(PC)Patching.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(PC)ReadMeMenu.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(PC)SystemRequirements.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\(PC)Uninstall.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\BasicCommands.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\CharacterNaming.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\EULA.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\GettingStarted.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\ManualErrata.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\ReadMe\RealmSelection.html"; DestDir: "{app}\Data\enGB\Documentation\ReadMe"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\(Mac)SupportMenu.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\(Mac)TechnicalSupport.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\(PC)SupportMenu.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\(PC)TechnicalSupport.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\AccountAdministration.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\BlizzardInsider.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\Employment.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\GameSuggestions.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\GameSupport.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Support\Password.html"; DestDir: "{app}\Data\enGB\Documentation\Support"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)AudioProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)BlizzardDownloaderProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)ConnectionLoginProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)GameplayProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)Install.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)PreventiveMaintenance.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)StartupProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)TroubleshootingMenu.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(Mac)VideoProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)AudioProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)BlizzardDownloaderProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)ConnectionLoginProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)GameplayProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)Install.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)PreventiveMaintenance.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)StartupProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)TroubleshootingMenu.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Documentation\Troubleshooting\(PC)VideoProblems.html"; DestDir: "{app}\Data\enGB\Documentation\Troubleshooting"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\WTF\Config.wtf"; DestDir: "{app}\WTF"; Flags: ignoreversion; AfterInstall: PostInstallConfigSetup
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
@@ -285,6 +176,12 @@ begin
     SaveStringToFile(ExpandConstant(CurrentFileName), #13#10 + 'SET maxFPS "30"', True);
   end else begin
     SaveStringToFile(ExpandConstant(CurrentFileName), #13#10 + 'SET maxFPS "200"', True);
+  end;
+
+  if WizardIsComponentSelected('textureCacheSize\64') then begin
+    SaveStringToFile(ExpandConstant(CurrentFileName), #13#10 + 'SET textureCacheSize "64"', True);
+  end else begin
+    SaveStringToFile(ExpandConstant(CurrentFileName), #13#10 + 'SET textureCacheSize "32"', True);
   end;
 
   SaveStringToFile(ExpandConstant(CurrentFileName), #13#10 + 'SET realmList "' + RealmListPage.Values[0] + '"', True);
