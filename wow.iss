@@ -89,12 +89,8 @@ Name: "textureCacheSize\64"; Description: "64 (requires system with 1GB RAM or m
 Source: "{src}\optional-sound.bin"; DestDir: "{app}\Data"; DestName: "patch-2.MPQ"; Flags: ignoreversion external; Components: Sound
 Source: "{src}\optional-sound-2.bin"; DestDir: "{app}\Data\enGB"; DestName: "patch-enGB-2.MPQ"; Flags: ignoreversion external; Components: Sound
 Source: "{src}\optional-cinematic.bin"; DestDir: "{app}\Data"; DestName: "patch-3.MPQ"; Flags: ignoreversion external; Components: Cinematic
-Source: "D:\Games\World of Warcraft 3.3.5\Battle.net.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\dbghelp.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\DivxDecoder.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\ijl15.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\msvcr80.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Scan.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\WoW.mfil"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Wow.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\WowError.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -103,7 +99,6 @@ Source: "D:\Games\World of Warcraft 3.3.5\Data\expansion.MPQ"; DestDir: "{app}\D
 Source: "D:\Games\World of Warcraft 3.3.5\Data\lichking.MPQ"; DestDir: "{app}\Data"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\patch.MPQ"; DestDir: "{app}\Data"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\AccountBilling.url"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
-Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\base-enGB.MPQ"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\connection-help.html"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Credits.html"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
 Source: "D:\Games\World of Warcraft 3.3.5\Data\enGB\Credits_BC.html"; DestDir: "{app}\Data\enGB"; Flags: ignoreversion
